@@ -1,0 +1,29 @@
+.btn-group {
+    display: flex;
+}
+
+#feedbacksWrapper {
+    display: flex;
+}
+
+#feedbacksWrapper > div {
+    width: 50%;
+    margin: 0.5rem;
+    padding: 0rem 1rem;
+    overflow: auto;
+    background-color: #2a2a2a;
+}
+
+#codeArea {
+    width: 100%;
+    height: 200px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+
+@media (prefers-color-scheme: light) {
+    #feedbacksWrapper > div {
+      background-color: #e9e9e9;
+    }
+}
