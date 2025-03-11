@@ -15,6 +15,7 @@ This project is a **Language Server Protocol (LSP) Test Client** that allows int
 
 ### Prerequisites
 
+- The Java language server requires a runtime environment of Java 21 (at a minimum) to run.
 - **Node.js** (>= 14.x recommended)
 - **npm** or **yarn**
 - To test the Python language server, install Pyright globally:

@@ -34,7 +34,7 @@ export class JavaLanguageServerService extends LanguageServerService {
     const launcherJar = path.join(
       serverPath,
       'plugins',
-      'org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar'
+      'org.eclipse.equinox.launcher_1.6.1100.v20250306-0509.jar'
     );
 
     const serverProcess = spawn('java', [

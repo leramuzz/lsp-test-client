@@ -40,8 +40,8 @@ def get_java_executable(known_args):
 	for match in matches:
 		java_major_version = int(match.group("major"))
 
-		if java_major_version < 17:
-			raise Exception("jdtls requires at least Java 17")
+		if java_major_version < 21:
+			raise Exception("jdtls requires at least Java 21")
 
 		return java_executable
 
@@ -49,6 +49,10 @@ def get_java_executable(known_args):
 
 def find_equinox_launcher(jdtls_base_directory):
 	plugins_dir = jdtls_base_directory / "plugins"
+	if (plugins_dir / 'org.eclipse.equinox.launcher.jar').is_file():
+		# mason-registry packaging
+		return str(plugins_dir / 'org.eclipse.equinox.launcher.jar')
+
 	launchers = plugins_dir.glob('org.eclipse.equinox.launcher_*.jar')
 	for launcher in launchers:
 		return str(plugins_dir / launcher)

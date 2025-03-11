@@ -1,3 +1,5 @@
 node_modules/
 dist/
 server/java-ls/data
+server/java-ls/config_*/
+!server/java-ls/config_*/config.ini
